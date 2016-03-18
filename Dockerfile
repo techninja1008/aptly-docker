@@ -9,6 +9,7 @@ apt-get install aptly -y
 
 ADD aptly.conf /etc/aptly.conf
 VOLUME ["/aptly"]
+VOLUME ["/etc"]
 EXPOSE 8080
 CMD ["/usr/bin/aptly", "api", "serve", "-no-lock"]
 
